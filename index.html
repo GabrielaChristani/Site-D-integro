@@ -1,0 +1,1838 @@
+<!doctype html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Integro Tecnologia — Plataforma de IA e IoT para o agronegócio: gêmeo digital, automação inteligente e análise preditiva em tempo real.">
+    <meta name="theme-color" content="#0a0f1c">
+    <meta property="og:title" content="Integro Tecnologia - Revolução Digital no Agronegócio">
+    <meta property="og:description" content="Plataforma de IA e IoT para agricultura: gêmeo digital, automação inteligente e análise preditiva em tempo real.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.d-integro.com.br">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Integro Tecnologia">
+    <meta name="twitter:description" content="Revolucionando o agronegócio com IA, IoT e gêmeo digital">
+  <title>Integro Tecnologia - Revolução Digital no Agronegócio</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%230a0f1c' width='100' height='100'/%3E%3Cg fill='%236366f1'%3E%3Crect x='30' y='15' width='20' height='20' rx='5'/%3E%3Crect x='45' y='25' width='20' height='20' rx='5'/%3E%3Crect x='60' y='35' width='20' height='20' rx='5'/%3E%3Crect x='30' y='40' width='20' height='20' rx='5'/%3E%3Crect x='45' y='50' width='20' height='20' rx='5'/%3E%3Crect x='60' y='60' width='20' height='20' rx='5'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect fill='%230a0f1c' width='180' height='180'/%3E%3Cg fill='%236366f1'%3E%3Crect x='54' y='27' width='36' height='36' rx='9'/%3E%3Crect x='81' y='45' width='36' height='36' rx='9'/%3E%3Crect x='108' y='63' width='36' height='36' rx='9'/%3E%3Crect x='54' y='72' width='36' height='36' rx='9'/%3E%3Crect x='81' y='90' width='36' height='36' rx='9'/%3E%3Crect x='108' y='108' width='36' height='36' rx='9'/%3E%3C/g%3E%3C/svg%3E">
+  <script src="/_sdk/element_sdk.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet" crossorigin>
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .skip-link {
+            position: absolute;
+            left: -999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        .skip-link:focus {
+            left: 10px;
+            top: 10px;
+            width: auto;
+            height: auto;
+            background: #ffffff;
+            color: #0a0f1c;
+            padding: 8px 12px;
+            border-radius: 6px;
+            z-index: 2000;
+        }
+
+      
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .section-header h2 {
+            font-size: clamp(36px, 8vw, 56px);
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 16px;
+            text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle, .contact-subtitle {
+            font-size: 18px;
+            color: #cbd5e1;
+            font-weight: 500;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Reduzir animações em mobile e respeitar preferências */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .floating-shape {
+                animation: none;
+            }
+            .neural-network {
+                opacity: 0;
+            }
+            .matrix-rain {
+                opacity: 0;
+            }
+            .hologram-grid {
+                opacity: 0.02;
+            }
+        }
+
+        :root {
+            --branco: #ffffff;
+            --azul-escuro-1: #0a0f1c;
+            --azul-escuro-2: #0d131d;
+            --azul-escuro-3: #0d1017;
+            --azul-escuro-4: #0e151f;
+            --azul-escuro-5: #0d121b;
+            --roxo-integro: #8b5cf6;
+            --azul-claro-integro: #06b6d4;
+            --verde-neon: #00ff88;
+            --laranja-tech: #ff6b35;
+            --amarelo-gold: #ffd700;
+        }
+
+        body {
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--branco);
+            overflow-x: hidden;
+            background: var(--azul-escuro-1);
+            position: relative;
+        }
+
+        /* Animações de fundo ultra avançadas */
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .neural-network {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+        }
+
+        .neural-node {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--roxo-integro);
+            border-radius: 50%;
+            animation: neuralPulse 3s ease-in-out infinite;
+        }
+
+        .neural-connection {
+            position: absolute;
+            height: 1px;
+            background: linear-gradient(90deg, var(--roxo-integro), transparent, var(--azul-claro-integro));
+            animation: dataFlow 4s linear infinite;
+        }
+
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.15;
+            animation: backgroundFloat 25s ease-in-out infinite;
+            filter: blur(1px);
+        }
+
+        .floating-shape:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            background: conic-gradient(from 0deg, var(--roxo-integro), var(--azul-claro-integro), var(--verde-neon), var(--roxo-integro));
+            top: 5%;
+            left: 5%;
+            animation-delay: 0s;
+            animation-duration: 30s;
+        }
+
+        .floating-shape:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, var(--azul-claro-integro), transparent);
+            top: 70%;
+            right: 10%;
+            animation-delay: -8s;
+            animation-duration: 35s;
+        }
+
+        .floating-shape:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            background: conic-gradient(from 45deg, var(--verde-neon), var(--roxo-integro), var(--laranja-tech));
+            bottom: 15%;
+            left: 15%;
+            animation-delay: -15s;
+            animation-duration: 40s;
+        }
+
+        .matrix-rain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.05;
+        }
+
+        .matrix-column {
+            position: absolute;
+            top: -100%;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--verde-neon);
+            animation: matrixFall 8s linear infinite;
+        }
+
+        .hologram-grid {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Animações */
+        @keyframes neuralPulse {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.5); }
+        }
+
+        @keyframes dataFlow {
+            0% { opacity: 0; transform: scaleX(0); }
+            50% { opacity: 1; transform: scaleX(1); }
+            100% { opacity: 0; transform: scaleX(0); }
+        }
+
+        @keyframes matrixFall {
+            0% { transform: translateY(-100%); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        @keyframes backgroundFloat {
+            0%, 100% {
+                transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+            }
+            25% {
+                transform: translateY(-30px) translateX(20px) rotate(90deg) scale(1.1);
+            }
+            50% {
+                transform: translateY(-15px) translateX(-25px) rotate(180deg) scale(0.9);
+            }
+            75% {
+                transform: translateY(-40px) translateX(15px) rotate(270deg) scale(1.05);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes rotateIn {
+            from { opacity: 0; transform: rotate(-180deg) scale(0.5); }
+            to { opacity: 1; transform: rotate(0deg) scale(1); }
+        }
+
+        @keyframes glowPulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.3); }
+            50% { box-shadow: 0 0 60px rgba(139, 92, 246, 0.8), 0 0 100px rgba(6, 182, 212, 0.4); }
+        }
+
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            0%, 50% { border-color: transparent; }
+            51%, 100% { border-color: var(--verde-neon); }
+        }
+
+        @keyframes float3D {
+            0%, 100% { transform: translateY(0px) rotateX(0deg) rotateY(0deg); }
+            33% { transform: translateY(-20px) rotateX(10deg) rotateY(120deg); }
+            66% { transform: translateY(-10px) rotateX(-5deg) rotateY(240deg); }
+        }
+
+        @keyframes hologramFlicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+            75% { opacity: 0.9; }
+        }
+
+        /* Header avançado */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 15, 28, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+            padding: 1rem 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.1), transparent);
+            animation: scanLine 3s linear infinite;
+        }
+
+        @keyframes scanLine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            animation: slideInLeft 1s ease-out;
+        }
+
+        .logo-svg {
+            filter: drop-shadow(0 10px 40px rgba(139, 92, 246, 0.4));
+            animation: glowPulse 3s ease-in-out infinite;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .logo:hover .logo-svg {
+            transform: scale(1.15) rotate(10deg);
+            filter: drop-shadow(0 15px 50px rgba(139, 92, 246, 0.6));
+        }
+
+        .logo-icon {
+            width: 56px;
+            height: 56px;
+            background: conic-gradient(from 0deg, var(--roxo-integro), var(--azul-claro-integro), var(--verde-neon), var(--roxo-integro));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--branco);
+            font-weight: 900;
+            font-size: 24px;
+            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            animation: glowPulse 3s ease-in-out infinite;
+        }
+
+        .logo-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .logo-icon:hover::before {
+            left: 100%;
+        }
+
+        .logo-icon:hover {
+            transform: scale(1.15) rotate(10deg);
+            box-shadow: 0 15px 50px rgba(139, 92, 246, 0.6);
+        }
+
+        .company-name {
+            font-size: 32px;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: -1px;
+            text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: var(--azul-claro-integro);
+            font-weight: 500;
+            margin-top: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-item {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.2), transparent);
+            transition: left 0.3s ease;
+        }
+
+        .nav-item:hover::before {
+            left: 100%;
+        }
+
+        .nav-item:hover {
+            color: var(--roxo-integro);
+            background: rgba(139, 92, 246, 0.1);
+        }
+
+        /* Hero Section Ultra Avançado */
+        .hero {
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--azul-escuro-1) 0%, var(--azul-escuro-2) 50%, var(--azul-escuro-3) 100%);
+            overflow: hidden;
+            padding: 140px 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(0, 255, 136, 0.1) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--roxo-integro);
+            margin-bottom: 32px;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero h1 {
+            font-size: clamp(56px, 10vw, 96px);
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 32px;
+            line-height: 1.1;
+            letter-spacing: -3px;
+            opacity: 0;
+            animation: fadeInUp 1.2s ease-out 0.4s forwards;
+        }
+
+        .hero-highlight {
+            background: conic-gradient(from 0deg, var(--roxo-integro), var(--azul-claro-integro), var(--verde-neon), var(--roxo-integro));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: hologramFlicker 2s ease-in-out infinite;
+        }
+
+        .hero p {
+            font-size: 28px;
+            color: #cbd5e1;
+            margin-bottom: 48px;
+            font-weight: 400;
+            line-height: 1.5;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.6s forwards;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.8s forwards;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: conic-gradient(from 0deg, var(--roxo-integro), var(--azul-claro-integro), var(--roxo-integro));
+            color: var(--branco);
+            padding: 20px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.4);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-6px) scale(1.05);
+            box-shadow: 0 25px 80px rgba(139, 92, 246, 0.6);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            border: 2px solid rgba(139, 92, 246, 0.5);
+            color: #ffffff;
+        }
+
+        .cta-secondary:hover {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: var(--roxo-integro);
+        }
+
+        /* Dashboard em Tempo Real */
+        .dashboard-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--azul-escuro-2) 0%, var(--azul-escuro-3) 100%);
+            position: relative;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .dashboard-card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(139, 92, 246, 0.4);
+            padding: 40px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .dashboard-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(6, 182, 212, 0.15));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .dashboard-card:hover::before {
+            opacity: 1;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(139, 92, 246, 0.7);
+            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.4);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .metric-value {
+            font-size: 56px;
+            font-weight: 900;
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(139, 92, 246, 0.8);
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 2;
+            line-height: 1.1;
+        }
+
+        .metric-label {
+            color: #f1f5f9;
+            font-size: 18px;
+            font-weight: 700;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 8px;
+        }
+
+        .metric-trend {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+            font-size: 16px;
+            color: var(--verde-neon);
+            position: relative;
+            z-index: 2;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+        }
+
+        /* Seção de Tecnologias */
+        .tech-section {
+            padding: 120px 0;
+            background: var(--azul-escuro-4);
+            position: relative;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-top: 80px;
+        }
+
+        .tech-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(139, 92, 246, 0.5);
+            padding: 40px;
+            border-radius: 24px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .tech-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            border-color: rgba(139, 92, 246, 0.8);
+            box-shadow: 0 25px 80px rgba(139, 92, 246, 0.5);
+        }
+
+        .tech-card::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 16px;
+            opacity: 0;
+            transition: all 0.4s ease;
+            animation: borderGlow 4s ease-in-out infinite;
+        }
+
+        .tech-card:hover::after {
+            opacity: 1;
+        }
+
+        @keyframes borderGlow {
+            0%, 100% { 
+                box-shadow: inset 0 0 20px rgba(139, 92, 246, 0.2);
+                border-color: rgba(139, 92, 246, 0.3);
+            }
+            50% { 
+                box-shadow: inset 0 0 40px rgba(6, 182, 212, 0.4);
+                border-color: rgba(6, 182, 212, 0.5);
+            }
+        }
+
+        .tech-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            background: conic-gradient(from 0deg, var(--roxo-integro), var(--azul-claro-integro), var(--verde-neon), var(--roxo-integro));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            animation: rotateIn 1s ease-out, glowPulse 3s ease-in-out infinite 1s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-icon::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: iconRotate 4s linear infinite;
+        }
+
+        @keyframes iconRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .tech-card h3 {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            text-shadow: 0 0 15px rgba(139, 92, 246, 0.8), 0 2px 4px rgba(0, 0, 0, 0.7);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-card:hover h3 {
+            animation: textGlow 1s ease-in-out;
+        }
+
+        @keyframes textGlow {
+            0%, 100% { 
+                text-shadow: 0 0 15px rgba(139, 92, 246, 0.8), 0 2px 4px rgba(0, 0, 0, 0.7);
+            }
+            50% { 
+                text-shadow: 0 0 30px rgba(6, 182, 212, 1), 0 0 40px rgba(139, 92, 246, 0.8), 0 2px 4px rgba(0, 0, 0, 0.7);
+                transform: scale(1.05);
+            }
+        }
+
+        .tech-card p {
+            color: #ffffff;
+            line-height: 1.7;
+            font-size: 17px;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(6, 182, 212, 0.6), 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Timeline da Empresa */
+        .timeline-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--azul-escuro-1) 0%, var(--azul-escuro-5) 100%);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 80px auto 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--roxo-integro), var(--azul-claro-integro), var(--verde-neon));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 60px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 60%;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 60%;
+            text-align: left;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: conic-gradient(from 0deg, var(--roxo-integro), var(--azul-claro-integro), var(--roxo-integro));
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+            animation: glowPulse 2s ease-in-out infinite;
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(139, 92, 246, 0.3);
+            padding: 32px;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.02);
+            border-color: rgba(139, 92, 246, 0.5);
+        }
+
+        .timeline-year {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--roxo-integro);
+            margin-bottom: 12px;
+        }
+
+        .timeline-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .timeline-description {
+            color: #f1f5f9;
+            line-height: 1.6;
+            font-size: 16px;
+            font-weight: 500;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Testimoniais */
+        .testimonials-section {
+            padding: 120px 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            margin-top: 80px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(139, 92, 246, 0.3);
+            padding: 40px;
+            border-radius: 20px;
+            position: relative;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 80px;
+            color: var(--roxo-integro);
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .testimonial-text {
+            color: #f1f5f9;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+            font-style: italic;
+            font-weight: 500;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            background: conic-gradient(from 0deg, var(--roxo-integro), var(--azul-claro-integro), var(--roxo-integro));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .author-info h4 {
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .author-info p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        /* Seção de Contato Avançada */
+        .contact {
+            background: linear-gradient(135deg, #0a0f1c 0%, #1e293b 100%);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 70%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 60px auto 0;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(139, 92, 246, 0.4);
+            padding: 40px;
+            border-radius: 20px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            color: #f1f5f9;
+            font-weight: 700;
+            margin-bottom: 8px;
+            font-size: 16px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 12px;
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--roxo-integro);
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: conic-gradient(from 0deg, var(--roxo-integro), var(--azul-claro-integro), var(--roxo-integro));
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+        }
+
+        /* Footer */
+        .footer {
+            background: #020617;
+            color: white;
+            padding: 80px 0 40px;
+            border-top: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: var(--roxo-integro);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #94a3b8;
+            text-decoration: none;
+            line-height: 1.6;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--azul-claro-integro);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(139, 92, 246, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--roxo-integro);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(139, 92, 246, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 40px; }
+            .hero p { font-size: 18px; }
+            .nav-menu { display: none; }
+            .timeline::before { left: 20px; }
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 60px;
+                margin-right: 0;
+                text-align: left;
+            }
+            .timeline-marker { left: 20px; }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Integro Tecnologia",
+    "url": "https://www.d-integro.com.br",
+    "description": "Plataforma de IA e IoT para agronegócio com gêmeo digital, automação inteligente e análise preditiva em tempo real",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vinhedo",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "knowsAbout": ["Inteligência Artificial", "IoT", "Gêmeo Digital", "Agronegócio", "Automação Agrícola"],
+    "areaServed": "BR"
+  }
+  </script>
+    <script src="/_sdk/data_sdk.js" type="text/javascript" defer></script>
+    <script src="https://cdn.tailwindcss.com" type="text/javascript" defer></script>
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <header class="header" role="banner">
+   <div class="container">
+    <div class="header-content">
+     <div class="logo">
+      <svg class="logo-svg" width="56" height="56" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <rect fill="none" width="100" height="100"/>
+        <g fill="url(#logoGradient)">
+          <rect x="30" y="15" width="20" height="20" rx="5"/>
+          <rect x="45" y="25" width="20" height="20" rx="5"/>
+          <rect x="60" y="35" width="20" height="20" rx="5"/>
+          <rect x="30" y="40" width="20" height="20" rx="5"/>
+          <rect x="45" y="50" width="20" height="20" rx="5"/>
+          <rect x="60" y="60" width="20" height="20" rx="5"/>
+        </g>
+      </svg>
+      <div>
+       <div class="company-name" id="company-name">
+        Integro Tecnologia
+       </div>
+       <div class="tagline" id="tagline">
+        Revolução Digital no Agronegócio
+       </div>
+      </div>
+     </div>
+    <nav class="nav-menu" aria-label="Main Navigation"><a href="#dashboard" class="nav-item">Dashboard</a> <a href="#tecnologias" class="nav-item">Tecnologias</a> <a href="#timeline" class="nav-item">Nossa História</a> <a href="#testimonials" class="nav-item">Clientes</a> <a href="#contact" class="nav-item">Contato</a>
+     </nav>
+    </div>
+   </div>
+  </header><!-- Elementos de fundo ultra avançados -->
+  <div class="background-animation">
+   <div class="hologram-grid"></div>
+   <div class="neural-network" id="neural-network"></div>
+   <div class="matrix-rain" id="matrix-rain"></div>
+   <div class="floating-shape"></div>
+   <div class="floating-shape"></div>
+   <div class="floating-shape"></div>
+  </div>
+    <main id="main-content">
+    <section class="hero">
+   <div class="container">
+    <div class="hero-content">
+     <div class="hero-badge">
+      🚀 Tecnologia de Ponta • IA • IoT • Gêmeo Digital
+     </div>
+     <h1 id="hero-title">O <span class="hero-highlight">Futuro</span> do Agronegócio Começa Aqui</h1>
+     <p id="hero-subtitle">Plataforma de IA e IoT que revoluciona a agricultura com gêmeo digital, automação inteligente e análise preditiva em tempo real</p>
+     <div class="cta-group"><a href="#dashboard" class="cta-button"> 🎯 Ver Dashboard Live </a> <a href="#contact" class="cta-button cta-secondary"> 💬 Agendar Demo </a>
+     </div>
+    </div>
+   </div>
+  </section><!-- Dashboard em Tempo Real -->
+  <section id="dashboard" class="dashboard-section">
+   <div class="container">
+    <div class="section-header">
+     <h2>Dashboard em Tempo Real</h2>
+     <p class="section-subtitle">Monitoramento inteligente de todas as operações da sua fazenda com dados atualizados a cada segundo</p>
+    </div>
+    <div class="dashboard-grid">
+     <div class="dashboard-card">
+      <div class="metric-value" id="farms-connected">
+       1,247
+      </div>
+      <div class="metric-label">
+       Fazendas Conectadas
+      </div>
+      <div class="metric-trend">
+       ↗ +12% este mês
+      </div>
+     </div>
+     <div class="dashboard-card">
+      <div class="metric-value" id="data-processed">
+       2.8M
+      </div>
+      <div class="metric-label">
+       Dados Processados/Hora
+      </div>
+      <div class="metric-trend">
+       ⚡ Tempo real
+      </div>
+     </div>
+     <div class="dashboard-card">
+      <div class="metric-value" id="efficiency-gain">
+       47%
+      </div>
+      <div class="metric-label">
+       Aumento de Eficiência
+      </div>
+      <div class="metric-trend">
+       📈 Média dos clientes
+      </div>
+     </div>
+     <div class="dashboard-card">
+      <div class="metric-value" id="cost-reduction">
+       R$ 2.1M
+      </div>
+      <div class="metric-label">
+       Economia Gerada
+      </div>
+      <div class="metric-trend">
+       💰 Último trimestre
+      </div>
+     </div>
+     <div class="dashboard-card">
+      <div class="metric-value" id="sensors-active">
+       15,432
+      </div>
+      <div class="metric-label">
+       Sensores Ativos
+      </div>
+      <div class="metric-trend">
+       🌐 Online agora
+      </div>
+     </div>
+     <div class="dashboard-card">
+      <div class="metric-value" id="predictions-made">
+       98.7%
+      </div>
+      <div class="metric-label">
+       Precisão das Previsões
+      </div>
+      <div class="metric-trend">
+       🎯 IA Avançada
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Seção de Tecnologias -->
+  <section id="tecnologias" class="tech-section">
+   <div class="container">
+    <div class="section-header">
+     <h2 id="about-title">Tecnologia de Ponta para o Campo</h2>
+     <p class="section-subtitle">Stack tecnológico completo com IA, Machine Learning, IoT e Gêmeo Digital para revolucionar sua operação</p>
+    </div>
+    <div class="tech-grid">
+     <div class="tech-card" style="opacity: 0; animation: fadeInUp 0.8s ease-out 0.2s forwards;">
+      <div class="tech-icon">
+       🤖
+      </div>
+      <h3>Inteligência Artificial</h3>
+      <p>Algoritmos de ML para previsão de safra, otimização de recursos e detecção precoce de problemas</p>
+     </div>
+     <div class="tech-card" style="opacity: 0; animation: fadeInUp 0.8s ease-out 0.4s forwards;">
+      <div class="tech-icon">
+       🌐
+      </div>
+      <h3>IoT Avançado</h3>
+      <p>Rede de sensores inteligentes com conectividade 5G, LoRaWAN e comunicação satelital</p>
+     </div>
+     <div class="tech-card" style="opacity: 0; animation: fadeInUp 0.8s ease-out 0.6s forwards;">
+      <div class="tech-icon">
+       👥
+      </div>
+      <h3>Gêmeo Digital</h3>
+      <p>Simulação virtual completa da fazenda para testes e otimizações sem riscos</p>
+     </div>
+     <div class="tech-card" style="opacity: 0; animation: fadeInUp 0.8s ease-out 0.8s forwards;">
+      <div class="tech-icon">
+       ⚡
+      </div>
+      <h3>Edge Computing</h3>
+      <p>Processamento local para decisões em tempo real mesmo sem conectividade</p>
+     </div>
+     <div class="tech-card" style="opacity: 0; animation: fadeInUp 0.8s ease-out 1.0s forwards;">
+      <div class="tech-icon">
+       🔒
+      </div>
+      <h3>Blockchain</h3>
+      <p>Rastreabilidade completa e segura de toda a cadeia produtiva</p>
+     </div>
+     <div class="tech-card" style="opacity: 0; animation: fadeInUp 0.8s ease-out 1.2s forwards;">
+      <div class="tech-icon">
+       📊
+      </div>
+      <h3>Big Data Analytics</h3>
+      <p>Análise de petabytes de dados para insights estratégicos e operacionais</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Timeline da Empresa -->
+  <section id="timeline" class="timeline-section">
+   <div class="container">
+    <div class="section-header">
+     <h2>Nossa Jornada de Inovação</h2>
+     <p class="section-subtitle">Duas décadas transformando o agronegócio com tecnologia de ponta</p>
+    </div>
+    <div class="timeline">
+     <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+       <div class="timeline-year">
+        2005
+       </div>
+       <div class="timeline-title">
+        Fundação da Integro
+       </div>
+       <div class="timeline-description">
+        Início da jornada com foco em automação industrial para o agronegócio
+       </div>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+       <div class="timeline-year">
+        2010
+       </div>
+       <div class="timeline-title">
+        Primeira Plataforma IoT
+       </div>
+       <div class="timeline-description">
+        Lançamento da primeira solução de telemetria para máquinas agrícolas
+       </div>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+       <div class="timeline-year">
+        2015
+       </div>
+       <div class="timeline-title">
+        Integração com IA
+       </div>
+       <div class="timeline-description">
+        Incorporação de algoritmos de Machine Learning para análise preditiva
+       </div>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+       <div class="timeline-year">
+        2020
+       </div>
+       <div class="timeline-title">
+        Gêmeo Digital
+       </div>
+       <div class="timeline-description">
+        Desenvolvimento da tecnologia de gêmeo digital para fazendas
+       </div>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+       <div class="timeline-year">
+        2025
+       </div>
+       <div class="timeline-title">
+        Plataforma Unificada
+       </div>
+       <div class="timeline-description">
+        Lançamento da Integro Platform - solução completa para o agronegócio 4.0
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Testimoniais -->
+  <section id="testimonials" class="testimonials-section">
+   <div class="container">
+    <div class="section-header">
+     <h2>O Que Nossos Clientes Dizem</h2>
+     <p class="section-subtitle">Resultados reais de produtores que transformaram suas operações com a Integro Platform</p>
+    </div>
+    <div class="testimonials-grid">
+     <div class="testimonial-card">
+      <div class="testimonial-text">
+       "A Integro Platform revolucionou nossa fazenda. Aumentamos a produtividade em 35% e reduzimos custos em 28%. A IA prevê problemas antes mesmo deles acontecerem!"
+      </div>
+      <div class="testimonial-author">
+       <div class="author-avatar">
+        JS
+       </div>
+       <div class="author-info">
+        <h4>João Silva</h4>
+        <p>Fazenda Santa Rita - 5.000 hectares</p>
+       </div>
+      </div>
+     </div>
+     <div class="testimonial-card">
+      <div class="testimonial-text">
+       "O gêmeo digital nos permitiu testar diferentes estratégias sem riscos. Otimizamos nossa irrigação e economizamos 40% de água mantendo a produtividade."
+      </div>
+      <div class="testimonial-author">
+       <div class="author-avatar">
+        MC
+       </div>
+       <div class="author-info">
+        <h4>Maria Costa</h4>
+        <p>Agropecuária Horizonte - 8.000 hectares</p>
+       </div>
+      </div>
+     </div>
+     <div class="testimonial-card">
+      <div class="testimonial-text">
+       "A integração com nosso ERP foi perfeita. Agora temos visibilidade completa da operação em tempo real. ROI de 300% no primeiro ano!"
+      </div>
+      <div class="testimonial-author">
+       <div class="author-avatar">
+        RP
+       </div>
+       <div class="author-info">
+        <h4>Roberto Pereira</h4>
+        <p>Grupo AgroTech - 15.000 hectares</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+    </section><!-- Contato Avançado -->
+    </main>
+  <section id="contact" class="contact">
+   <div class="container">
+    <div class="section-header">
+     <h2 id="contact-title">Transforme Sua Fazenda Hoje</h2>
+     <p class="contact-subtitle">Agende uma demonstração personalizada e descubra como a Integro Platform pode revolucionar sua operação</p>
+    </div>
+    <form class="contact-form" id="contact-form">
+     <div class="form-group"><label for="name">Nome Completo</label> <input type="text" id="name" name="name" required>
+     </div>
+     <div class="form-group"><label for="email">E-mail</label> <input type="email" id="email" name="email" required>
+     </div>
+     <div class="form-group"><label for="company">Empresa/Fazenda</label> <input type="text" id="company" name="company" required>
+     </div>
+     <div class="form-group"><label for="hectares">Área (hectares)</label> <input type="number" id="hectares" name="hectares" placeholder="Ex: 1000">
+     </div>
+     <div class="form-group"><label for="message">Conte-nos sobre seus desafios</label> <textarea id="message" name="message" rows="4" placeholder="Descreva sua operação atual e principais necessidades..."></textarea>
+     </div><button type="submit" class="submit-btn">🚀 Agendar Demonstração</button>
+    </form>
+    <div class="contact-info" style="margin-top: 60px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+     <div class="contact-item" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(139, 92, 246, 0.2); padding: 32px; border-radius: 20px; display: flex; align-items: center; gap: 20px;">
+      <div class="contact-icon" style="width: 60px; height: 60px; background: conic-gradient(from 0deg, var(--roxo-integro), var(--azul-claro-integro), var(--roxo-integro)); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+       🌐
+      </div>
+      <div class="contact-details">
+       <h4 style="color: #ffffff; font-size: 18px; font-weight: 600; margin-bottom: 8px;">Website</h4><a href="https://www.d-integro.com.br" target="_blank" rel="noopener noreferrer" id="website-link" style="color: var(--roxo-integro); text-decoration: none; font-weight: 600;">www.d-integro.com.br</a>
+      </div>
+     </div>
+     <div class="contact-item" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(139, 92, 246, 0.2); padding: 32px; border-radius: 20px; display: flex; align-items: center; gap: 20px;">
+      <div class="contact-icon" style="width: 60px; height: 60px; background: conic-gradient(from 0deg, var(--roxo-integro), var(--azul-claro-integro), var(--roxo-integro)); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+       📍
+      </div>
+      <div class="contact-details">
+       <h4 style="color: #ffffff; font-size: 18px; font-weight: 600; margin-bottom: 8px;">Localização</h4><span style="color: #cbd5e1; font-size: 16px;">Vinhedo, São Paulo</span>
+      </div>
+     </div>
+     <div class="contact-item" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px); border: 1px solid rgba(139, 92, 246, 0.2); padding: 32px; border-radius: 20px; display: flex; align-items: center; gap: 20px;">
+      <div class="contact-icon" style="width: 60px; height: 60px; background: conic-gradient(from 0deg, var(--roxo-integro), var(--azul-claro-integro), var(--roxo-integro)); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+       ⚡
+      </div>
+      <div class="contact-details">
+       <h4 style="color: #ffffff; font-size: 18px; font-weight: 600; margin-bottom: 8px;">Suporte 24/7</h4><span style="color: #cbd5e1; font-size: 16px;">Monitoramento contínuo</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Footer Avançado -->
+  <footer class="footer">
+   <div class="container">
+    <div class="footer-content">
+     <div class="footer-section">
+      <h3>Integro Platform</h3>
+      <p>Revolucionando o agronegócio com tecnologia de ponta, IA e gêmeo digital para máxima eficiência e sustentabilidade.</p>
+      <svg width="120" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="margin-top: 16px; opacity: 0.8;">
+        <defs>
+          <linearGradient id="logoGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <g fill="url(#logoGradient2)">
+          <rect x="30" y="15" width="20" height="20" rx="5"/>
+          <rect x="45" y="25" width="20" height="20" rx="5"/>
+          <rect x="60" y="35" width="20" height="20" rx="5"/>
+          <rect x="30" y="40" width="20" height="20" rx="5"/>
+          <rect x="45" y="50" width="20" height="20" rx="5"/>
+          <rect x="60" y="60" width="20" height="20" rx="5"/>
+        </g>
+      </svg>
+      <div class="social-links"><a href="#" class="social-link" rel="noopener noreferrer">📘</a> <a href="#" class="social-link" rel="noopener noreferrer">📱</a> <a href="#" class="social-link" rel="noopener noreferrer">💼</a> <a href="#" class="social-link" rel="noopener noreferrer">📺</a>
+      </div>
+     </div>
+     <div class="footer-section">
+      <h3>Soluções</h3>
+      <p><a href="#" rel="noopener noreferrer">Automação Agrícola</a></p>
+      <p><a href="#" rel="noopener noreferrer">Gêmeo Digital</a></p>
+      <p><a href="#" rel="noopener noreferrer">IoT e Sensores</a></p>
+      <p><a href="#" rel="noopener noreferrer">Análise Preditiva</a></p>
+      <p><a href="#" rel="noopener noreferrer">Integração ERP</a></p>
+     </div>
+     <div class="footer-section">
+      <h3>Suporte</h3>
+      <p><a href="#" rel="noopener noreferrer">Central de Ajuda</a></p>
+      <p><a href="#" rel="noopener noreferrer">Documentação</a></p>
+      <p><a href="#" rel="noopener noreferrer">Treinamentos</a></p>
+      <p><a href="#" rel="noopener noreferrer">Status do Sistema</a></p>
+      <p><a href="#" rel="noopener noreferrer">Contato Técnico</a></p>
+     </div>
+     <div class="footer-section">
+      <h3>Empresa</h3>
+      <p><a href="#" rel="noopener noreferrer">Sobre Nós</a></p>
+      <p><a href="#" rel="noopener noreferrer">Carreiras</a></p>
+      <p><a href="#" rel="noopener noreferrer">Imprensa</a></p>
+      <p><a href="#" rel="noopener noreferrer">Parceiros</a></p>
+      <p><a href="#" rel="noopener noreferrer">Investidores</a></p>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <p>© 2025 Integro Tecnologia. Todos os direitos reservados.</p>
+     <p style="color: var(--roxo-integro); font-weight: 600; margin-top: 8px;">Revolução Digital no Agronegócio • Tecnologia que Transforma</p>
+    </div>
+   </div>
+  </footer>
+  <script>
+        const defaultConfig = {
+            company_name: "Integro Tecnologia",
+            tagline: "Revolução Digital no Agronegócio",
+            hero_title: "O Futuro do Agronegócio Começa Aqui",
+            hero_subtitle: "Plataforma de IA e IoT que revoluciona a agricultura com gêmeo digital, automação inteligente e análise preditiva em tempo real",
+            about_title: "Tecnologia de Ponta para o Campo",
+            contact_title: "Transforme Sua Fazenda Hoje",
+            website_url: "www.d-integro.com.br"
+        };
+
+        async function onConfigChange(config) {
+            document.getElementById('company-name').textContent = config.company_name || defaultConfig.company_name;
+            document.getElementById('tagline').textContent = config.tagline || defaultConfig.tagline;
+            document.getElementById('hero-title').innerHTML = (config.hero_title || defaultConfig.hero_title).replace('Futuro', '<span class="hero-highlight">Futuro</span>');
+            document.getElementById('hero-subtitle').textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+            document.getElementById('about-title').textContent = config.about_title || defaultConfig.about_title;
+            document.getElementById('contact-title').textContent = config.contact_title || defaultConfig.contact_title;
+            
+            const websiteLink = document.getElementById('website-link');
+            const websiteUrl = config.website_url || defaultConfig.website_url;
+            websiteLink.textContent = websiteUrl;
+            websiteLink.href = websiteUrl.startsWith('http') ? websiteUrl : `https://${websiteUrl}`;
+        }
+
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+
+        function mapToEditPanelValues(config) {
+            return new Map([
+                ["company_name", config.company_name || defaultConfig.company_name],
+                ["tagline", config.tagline || defaultConfig.tagline],
+                ["hero_title", config.hero_title || defaultConfig.hero_title],
+                ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+                ["about_title", config.about_title || defaultConfig.about_title],
+                ["contact_title", config.contact_title || defaultConfig.contact_title],
+                ["website_url", config.website_url || defaultConfig.website_url]
+            ]);
+        }
+
+        // Initialize SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+
+        // Criar rede neural animada
+        function createNeuralNetwork() {
+            const network = document.getElementById('neural-network');
+            if (!network) return;
+
+            // Criar nós
+            for (let i = 0; i < 20; i++) {
+                const node = document.createElement('div');
+                node.className = 'neural-node';
+                node.style.left = Math.random() * 100 + '%';
+                node.style.top = Math.random() * 100 + '%';
+                node.style.animationDelay = Math.random() * 3 + 's';
+                network.appendChild(node);
+            }
+
+            // Criar conexões
+            for (let i = 0; i < 15; i++) {
+                const connection = document.createElement('div');
+                connection.className = 'neural-connection';
+                connection.style.left = Math.random() * 100 + '%';
+                connection.style.top = Math.random() * 100 + '%';
+                connection.style.width = Math.random() * 200 + 50 + 'px';
+                connection.style.transform = `rotate(${Math.random() * 360}deg)`;
+                connection.style.animationDelay = Math.random() * 4 + 's';
+                network.appendChild(connection);
+            }
+        }
+
+        // Criar chuva de matriz
+        function createMatrixRain() {
+            const matrix = document.getElementById('matrix-rain');
+            if (!matrix) return;
+
+            const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+            
+            for (let i = 0; i < 15; i++) {
+                const column = document.createElement('div');
+                column.className = 'matrix-column';
+                column.style.left = Math.random() * 100 + '%';
+                column.style.animationDelay = Math.random() * 8 + 's';
+                column.style.animationDuration = (Math.random() * 3 + 5) + 's';
+                
+                let text = '';
+                for (let j = 0; j < 20; j++) {
+                    text += characters.charAt(Math.floor(Math.random() * characters.length)) + '<br>';
+                }
+                column.innerHTML = text;
+                
+                matrix.appendChild(column);
+            }
+        }
+
+        // Animação de contadores do dashboard
+        function animateDashboardCounters() {
+            const counters = [
+                { id: 'farms-connected', target: 1247, suffix: '' },
+                { id: 'data-processed', target: 2.8, suffix: 'M' },
+                { id: 'efficiency-gain', target: 47, suffix: '%' },
+                { id: 'cost-reduction', target: 2.1, suffix: 'M', prefix: 'R$ ' },
+                { id: 'sensors-active', target: 15432, suffix: '' },
+                { id: 'predictions-made', target: 98.7, suffix: '%' }
+            ];
+
+            counters.forEach(counter => {
+                const element = document.getElementById(counter.id);
+                if (!element) return;
+
+                let current = 0;
+                const increment = counter.target / 100;
+                
+                const updateCounter = () => {
+                    if (current < counter.target) {
+                        current += increment;
+                        const value = counter.target > 100 ? Math.floor(current) : current.toFixed(1);
+                        element.textContent = (counter.prefix || '') + value + counter.suffix;
+                        setTimeout(updateCounter, 30);
+                    } else {
+                        element.textContent = (counter.prefix || '') + counter.target + counter.suffix;
+                    }
+                };
+                
+                updateCounter();
+            });
+        }
+
+        // Intersection Observer para animações
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    
+                    // Animar dashboard quando aparecer
+                    if (entry.target.id === 'dashboard') {
+                        setTimeout(animateDashboardCounters, 500);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = '⏳ Enviando...';
+            submitBtn.disabled = true;
+            
+            // Simular envio
+            setTimeout(() => {
+                submitBtn.textContent = '✅ Mensagem Enviada!';
+                submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '';
+                    this.reset();
+                }, 3000);
+            }, 2000);
+        });
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', () => {
+            createNeuralNetwork();
+            createMatrixRain();
+
+            // Observer para seções
+            document.querySelectorAll('.section-header, .dashboard-section, .timeline-item, .tech-card, .testimonial-card').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Stagger animations para timeline
+            document.querySelectorAll('.timeline-item').forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.3}s`;
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            const scrolled = window.scrollY > 100;
+            
+            header.style.background = scrolled ? 
+                'rgba(10, 15, 28, 0.98)' : 
+                'rgba(10, 15, 28, 0.95)';
+            header.style.boxShadow = scrolled ? 
+                '0 8px 32px rgba(139, 92, 246, 0.2)' : 
+                'none';
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Atualização em tempo real dos dados do dashboard
+        setInterval(() => {
+            const elements = [
+                { id: 'farms-connected', min: 1240, max: 1250 },
+                { id: 'sensors-active', min: 15400, max: 15500 }
+            ];
+
+            elements.forEach(el => {
+                const element = document.getElementById(el.id);
+                if (element) {
+                    const newValue = Math.floor(Math.random() * (el.max - el.min + 1)) + el.min;
+                    element.textContent = newValue.toLocaleString();
+                }
+            });
+        }, 5000);
+    </script>
+ </body>
+</html>
